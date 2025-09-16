@@ -19,5 +19,8 @@ class TestDictionary(unittest.TestCase):
         result = self.dict.look_up("pez")
         self.assertEqual(result, "Definition not found.")
 
+    def tearDown(self):
+        self.dict = None
+
 if __name__ == "__main__":
     unittest.main()
