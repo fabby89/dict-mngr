@@ -15,5 +15,9 @@ class TestDictionary(unittest.TestCase):
         result = self.dict.look_up("perro")
         self.assertEqual(result, "animal canino")
 
+    def test_lookup_not_found(self):
+        result = self.dict.look_up("pez")
+        self.assertEqual(result, "Definition not found.")
+
 if __name__ == "__main__":
     unittest.main()
